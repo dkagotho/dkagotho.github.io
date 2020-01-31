@@ -29,9 +29,11 @@ p {
     text-align: left;
 }
 
+@media (min-width: 668px) {
 .col-md-6 {
     background-color: #ffff;
     border-radius: 50px 50px 50px 50px;
+}
 }
 
 .btn {
@@ -46,15 +48,12 @@ footer {
     text-align: center;
     margin-top: 60px;
 }
-@media (max-width: 700px) {
-    .top-counter {
-        grid-template-areas: 
-            'showcase showcase'
-            'top-box-a top-box-b';
-    }
-    .showcase h1 {
-    font-size: 40px;    
-    }
+@media (min-width: 300px) and (max-width: 667px) {
+    .col-md-6 {
+        background-color: #ffff;
+        border-radius: 50px 50px 50px 50px;
+        width: 360px;
+    }   
     
 }
 
