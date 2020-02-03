@@ -17,6 +17,7 @@ h2 {
     padding-left: 50px;
     font-family: 'Montserrat Alternates', sans-serif;
     text-emphasis: 100px;
+    text-align: left;
 }
 
 .container {
@@ -45,6 +46,8 @@ p {
 }
 
 footer {
+    background-color: grey;
+    height: 30px;
     text-align: center;
     margin-top: 60px;
 }
