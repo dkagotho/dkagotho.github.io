@@ -10,16 +10,39 @@ var randomFunction = {
   upper: getRandomUpper,
 }
 
-function generatePassword(){
-  
+//this is my object
+var criteria = {
+  length: 0,
+  hasVowels: false
 }
+
+function generatePassword(){
+  includeVowels();
+
+}
+
+function getLength(){
+  var passwordLength = prompt ("How long would you like your password to be") 
+    if (passwordLength >= 8 && passwordLength <= 128){
+      criteria.length = passwordLength;
+    }
+    
+}
+
+function includeVowels(){
+  if (confirm ("would you like to have vowels in your password?")){
+    criteria.hasVowels = true;
+    
+  }
+}
+
 // Write password to the #password input
 function writePassword() {
 // console.log("enter to write function");
 
-  var password = generatePassword();
+  var password = generatePassword(pwLenghth);
   var passwordText = document.querySelector("#password");
-
+  console.log(password);
   passwordText.value = password;
 
 }
@@ -27,6 +50,7 @@ function writePassword() {
 function getRandomLower(){
   return String.fromCharCode(Math.floor(Math.random()* 26)+ 97);
 }
+
 
 function getRandomUpper(){
   return String.fromCharCode(Math.floor(Math.random()* 26)+ 65);
