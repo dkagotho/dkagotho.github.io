@@ -13,12 +13,16 @@ var randomFunction = {
 //this is my object
 var criteria = {
   length: 0,
-  hasVowels: false
+  hasLowercase: false,
+  hasUppercase: false,
+  hasSpecialCharacters: false,
 }
 
 function generatePassword(){
+  getLength();
   includeVowels();
-
+  includeUppercase();
+  includeSpecialCharacters();
 }
 
 function getLength(){
@@ -26,13 +30,27 @@ function getLength(){
     if (passwordLength >= 8 && passwordLength <= 128){
       criteria.length = passwordLength;
     }
-    
+    else {
+      alert("Please pick a password length of between 8 and 128?");
+      getLength();
+    }
 }
 
-function includeVowels(){
-  if (confirm ("would you like to have vowels in your password?")){
-    criteria.hasVowels = true;
-    
+function includeLowercase(){
+  if (confirm ("would you like to have lowercase alphabet in your password?")){
+    criteria.hasLowercase = true;
+  }
+}
+
+function includeUppercase(){
+  if (confirm ("would you like to have uppercase alphabet in your password?")){
+    criteria.hasUppercase = true;
+  }
+}
+
+function includeSpecialCharacters(){
+  if (confirm ("would you like to have special characters in your password?")){
+    criteria.hasSpecialCharacters = true;
   }
 }
 
@@ -40,7 +58,7 @@ function includeVowels(){
 function writePassword() {
 // console.log("enter to write function");
 
-  var password = generatePassword(pwLenghth);
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
   console.log(password);
   passwordText.value = password;
