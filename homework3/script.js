@@ -12,23 +12,42 @@ var randomFunction = {
 
 //this is my object
 var criteria = {
-  length: 0,
+  passwordLength: 0,
   hasLowercase: false,
   hasUppercase: false,
-  hasSpecialCharacters: false,
+  hasSpecialCharacter: false,
+  hasNumber: false
+}
+
+function getCriteria(){
+  getLength();
+  includeLowercase();
+  includeUppercase();
+  includeSpecialCharacter();
+  includeNumber();
 }
 
 function generatePassword(){
-  getLength();
-  includeVowels();
-  includeUppercase();
-  includeSpecialCharacters();
+  getCriteria();
+  if(criteria.hasLowercase || criteria.hasUppercase || criteria.hasSpecialCharacter || criteria.hasNumber)
+  {
+var password;
+for (let index = 0; index < criteria.passwordLength.length; index++) {
+  password += "lol"
+  
+}
+password
+  }
+  else{
+    alert("Please pick at least one criteria for your password");
+    generatePassword();
+  }
 }
 
 function getLength(){
-  var passwordLength = prompt ("How long would you like your password to be") 
+  var passwordLength = prompt ("How long would you like your password to be?") 
     if (passwordLength >= 8 && passwordLength <= 128){
-      criteria.length = passwordLength;
+      criteria.passwordLength = passwordLength;
     }
     else {
       alert("Please pick a password length of between 8 and 128?");
@@ -48,9 +67,15 @@ function includeUppercase(){
   }
 }
 
-function includeSpecialCharacters(){
-  if (confirm ("would you like to have special characters in your password?")){
-    criteria.hasSpecialCharacters = true;
+function includeSpecialCharacter(){
+  if (confirm ("would you like to have special character in your password?")){
+    criteria.hasSpecialCharacter = true;
+  }
+}
+
+function includeNumber(){
+  if (confirm ("would you like to have a number in your password?")){
+    criteria.number = true;
   }
 }
 
