@@ -1,17 +1,10 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
-var lengthEl = document.getElementById("lenght");
-var upperCaseEl = document.getElementById("uppercase")
-
-var posibleCharacters = ["!","@","#","$","%","^","&","*"];
-//this is my object
 var generateBtn = document.querySelector("#generate");
 
 var randomFunction = {
   symbol: getRandomSymbol,
   number: getRandomNumber,
   lower: getRandomLower,
-  upper: getRandomUpper,
+  upper: getRandomUpper
 }
 
 function getRandomLower() {
@@ -100,6 +93,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   console.log(password);
   passwordText.value = password;
+  alert("Here is your password: " + password);
 }
 
 function generatePassword() {
@@ -149,7 +143,7 @@ function buildPassword() {
 
   //Now let's randomly pick the required number of characters from "initialPassword"
   var password = "";
-  for (var i = 0; i < criteria.passwordLength; i++) {
+  for (var index = 0; index < criteria.passwordLength; index++) {
     password += initialPassword.charAt(Math.floor(Math.random() * initialPassword.length));
   }
 
@@ -157,5 +151,5 @@ function buildPassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)
 
