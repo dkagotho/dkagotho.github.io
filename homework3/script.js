@@ -93,7 +93,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   console.log(password);
   passwordText.value = password;
-  alert("Here is your password: " + password);
 }
 
 function generatePassword() {
