@@ -3,13 +3,7 @@ var generateBtn = document.querySelector("#generate");
 var lengthEl = document.getElementById("lenght");
 var upperCaseEl = document.getElementById("uppercase")
 
-var randomFunction = {
-  symbol: getRandomSymbol,
-  number: getRandomNumber,
-  lower: getRandomLower,
-  upper: getRandomUpper,
-}
-
+var posibleCharacters = ["!","@","#","$","%","^","&","*"];
 //this is my object
 var criteria = {
   passwordLength: 0,
@@ -25,18 +19,40 @@ function getCriteria(){
   includeUppercase();
   includeSpecialCharacter();
   includeNumber();
-}
 
-function generatePassword(){
+}
+  function generatePassword(){
   getCriteria();
   if(criteria.hasLowercase || criteria.hasUppercase || criteria.hasSpecialCharacter || criteria.hasNumber)
   {
-var password;
-for (let index = 0; index < criteria.passwordLength.length; index++) {
-  password += "lol"
-  
-}
-password
+    var password = "";
+    var finalpassword = "";
+
+    if (criteria.hasLowercase)
+    {
+      password += 'abcdefghijklmnopqrstuvwxyz';
+    }
+    if (criteria.hasUppercase)
+    {
+      password += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    }
+    if (criteria.hasNumber)
+    {
+      password += '0123456789'
+    }
+    if (criteria.specialCharacter)
+    {
+      password += '!@#$%^&*+'
+    }
+    console.log(password);
+    for (let index = 0; index < criteria.passwordLength; index++) {
+      finalpassword += password[Math.floor(Math.random()*password.length-1)];
+      // password += randomFunction.lower();
+      // password += randomFunction.number();
+      // password += randomFunction.upper();
+      // password += randomFunction.symbol();
+    }
+    return finalpassword;
   }
   else{
     alert("Please pick at least one criteria for your password");
@@ -45,7 +61,7 @@ password
 }
 
 function getLength(){
-  var passwordLength = prompt ("How long would you like your password to be?") 
+  var passwordLength = parseInt(prompt ("How long would you like your password to be?")) 
     if (passwordLength >= 8 && passwordLength <= 128){
       criteria.passwordLength = passwordLength;
     }
@@ -88,24 +104,6 @@ function writePassword() {
   console.log(password);
   passwordText.value = password;
 
-}
-
-function getRandomLower(){
-  return String.fromCharCode(Math.floor(Math.random()* 26)+ 97);
-}
-
-
-function getRandomUpper(){
-  return String.fromCharCode(Math.floor(Math.random()* 26)+ 65);
-}
-
-function getRandomNumber(){
-  return String.fromCharCode(Math.floor(Math.random()* 10)+ 48);
-}
-
-function getRandomSymbol(){
-  const Symbols = "?>@#$%^&*()<?.,/]\[=]/";
-  return Symbols[Math.floor(Math.random()*Symbols.length)];
 }
 
 // Add event listener to generate button
