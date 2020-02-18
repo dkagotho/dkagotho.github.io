@@ -1,0 +1,1 @@
+I created a password generator that generates a password that contains lower and upper case letters,numbers and special characters. The user is required to pick the options to have all the stipulated criteria ignorer to receive the password. The criteria is to have confirm to have special characters, lower and uppercase letters and numbers.
