@@ -7,15 +7,15 @@ var questions = [{
     choices: ["Using an array", "Using getType function", "Using typeof operator", "None of the above"],
     correctAnswer: 2
 }, {
-    question: "Inside which HTML element do we put the JavaScript?",
-    choices: ["<js>", "<script>", "<scripting>", "<javascript>"],
+    question: "Which of the following function of String object executes the search for a match between a regular expression and a specified string?",
+    choices: ["concat()", "search()", "match()", "replace()"],
     correctAnswer: 1
 }, {
     question: "How do you create a function in JavaScript?",
     choices: ["function myFunction()", "function=myFunction()", "()function", "function:myFunction()"],
     correctAnswer: 0
 }, {
-    question: "How do you call a function named "myFunction"?",
+    question: "How do you call a function named myFunction?",
     choices: ["myFunction()", "call myFunction()", "call function myFunction", "function"],
     correctAnswer: 0
 }];
@@ -55,13 +55,13 @@ $(document).ready(function () {
                     //                    $(document).find(".nextButton").toggle();
                     //                    $(document).find(".playAgainButton").toggle();
                     // Change the text in the next button to ask if user wants to play again
-                    $(document).find(".nextButton").text("Play Again?");
+                    $(document).find(".startButton").text("Restart?");
                     quizOver = true;
                 }
             }
         } else { // quiz is over and clicked the next button (which now displays 'Play Again?'
             quizOver = false;
-            $(document).find(".nextButton").text("Next Question");
+            $(document).find(".startButton").text("Start");
             resetQuiz();
             displayCurrentQuestion();
             hideScore();
