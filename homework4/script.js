@@ -1,22 +1,22 @@
 var questions = [{
-    question: "What is the population of Brazil?",
-    choices: ["145 million", "199 million", "182 million", "205 million"],
+    question: "Which of the following is an advantage of using JavaScript?",
+    choices: ["Less server interaction", "All the above", "Immediate feedback to the visitors", "Increased interactivity"],
     correctAnswer: 1
 }, {
-    question: "What is 27*14?",
-    choices: ["485", "634", "408", "528"],
+    question: "How can you get the type of arguments passed to a function?",
+    choices: ["Using an array", "Using getType function", "Using typeof operator", "None of the above"],
     correctAnswer: 2
 }, {
-    question: "What is the busiest train station in the world?",
-    choices: ["Grand Central, NY", "Shibuya, Tokyo", "Beijing Central, Chine", "Gard du Nord, Paris"],
+    question: "Inside which HTML element do we put the JavaScript?",
+    choices: ["<js>", "<script>", "<scripting>", "<javascript>"],
     correctAnswer: 1
 }, {
-    question: "What is the longest river?",
-    choices: ["Nile", "Amazon", "Mississippi", "Yangtze"],
+    question: "How do you create a function in JavaScript?",
+    choices: ["function myFunction()", "function=myFunction()", "()function", "function:myFunction()"],
     correctAnswer: 0
 }, {
-    question: "What is the busiest tube station in the London?",
-    choices: ["Waterloo", "Baker Street", "Kings Cross", "Victoria"],
+    question: "How do you call a function named "myFunction"?",
+    choices: ["myFunction()", "call myFunction()", "call function myFunction", "function"],
     correctAnswer: 0
 }];
 
@@ -31,7 +31,7 @@ $(document).ready(function () {
     $(this).find(".quizMessage").hide();
 
     // On clicking next, display the next question
-    $(this).find(".nextButton").on("click", function () {
+    $(this).on("click", function () {
         if (!quizOver) {
 
             value = $("input[type='radio']:checked").val();
