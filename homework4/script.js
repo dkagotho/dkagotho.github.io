@@ -1,24 +1,30 @@
-var questions = [{
+var questions = [
+    {
     question: "Which of the following is an advantage of using JavaScript?",
     choices: ["Less server interaction", "All the above", "Immediate feedback to the visitors", "Increased interactivity"],
     correctAnswer: 1
-}, {
+}, 
+{
     question: "How can you get the type of arguments passed to a function?",
     choices: ["Using an array", "Using getType function", "Using typeof operator", "None of the above"],
     correctAnswer: 2
-}, {
+}, 
+{
     question: "Which of the following function of String object executes the search for a match between a regular expression and a specified string?",
     choices: ["concat()", "search()", "match()", "replace()"],
     correctAnswer: 1
-}, {
+}, 
+{
     question: "How do you create a function in JavaScript?",
     choices: ["function myFunction()", "function=myFunction()", "()function", "function:myFunction()"],
     correctAnswer: 0
-}, {
+}, 
+{
     question: "How do you call a function named myFunction?",
     choices: ["myFunction()", "call myFunction()", "call function myFunction", "function"],
     correctAnswer: 0
-}];
+}
+];
 
 var currentQuestion = 0;
 var correctAnswers = 0;
