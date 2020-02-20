@@ -51,21 +51,17 @@ $(document).ready(function () {
 
                 if (value == questions[currentQuestion].correctAnswer) {
                     correctAnswers++;
-                }
-
+                }    
                 currentQuestion++; // Since we have already displayed the first question on DOM ready
                 if (currentQuestion < questions.length) {
                     displayCurrentQuestion();
                 } else {
                     displayScore();
-                    //                    $(document).find(".nextButton").toggle();
-                    //                    $(document).find(".playAgainButton").toggle();
-                    // Change the text in the next button to ask if user wants to play again
                     $(document).find(".startButton").text("Restart?");
                     quizOver = true;
                 }
             }
-        } else { // quiz is over and clicked the next button (which now displays 'Play Again?'
+        } else { 
             quizOver = false;
             $(document).find(".startButton").text("Start");
             resetQuiz();
@@ -76,7 +72,6 @@ $(document).ready(function () {
 
 });
 
-// This displays the current question AND the choices
 function displayCurrentQuestion() {
 
     console.log("In display current Question");
@@ -85,11 +80,9 @@ function displayCurrentQuestion() {
     var questionClass = $(document).find(".quizContainer > .question");
     var choiceList = $(document).find(".quizContainer > .choiceList");
     var numChoices = questions[currentQuestion].choices.length;
-
-    // Set the questionClass text to the current question
+    
     $(questionClass).text(question);
 
-    // Remove all current <li> elements (if any)
     $(choiceList).find("li").remove();
 
     var choice;
