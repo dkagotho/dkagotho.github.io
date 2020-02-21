@@ -35,6 +35,7 @@ $(document).ready(function () {
     // Display the first question
     displayCurrentQuestion();
     $(this).find(".quizMessage").hide();
+    $(document).find(".startButton").hide();
 
     // On clicking next, display the next question
     $(this).on("click", function () {
@@ -51,19 +52,23 @@ $(document).ready(function () {
 
                 if (value == questions[currentQuestion].correctAnswer) {
                     correctAnswers++;
+                    $(document).find(".answer").text("Correct");
                 }    
+                else{
+                    console.log("incorrect");
+                    $(document).find(".answer").text("Incorrect");
+                }
                 currentQuestion++; // Since we have already displayed the first question on DOM ready
                 if (currentQuestion < questions.length) {
-                    displayCurrentQuestion();
+                    setTimeout(function(){ displayCurrentQuestion(); }, 5000);
                 } else {
                     displayScore();
-                    $(document).find(".startButton").text("Restart?");
+                    $(document).find(".startButton").show();
                     quizOver = true;
                 }
             }
         } else { 
             quizOver = false;
-            $(document).find(".startButton").text("Start");
             resetQuiz();
             displayCurrentQuestion();
             hideScore();
@@ -78,10 +83,13 @@ function displayCurrentQuestion() {
 
     var question = questions[currentQuestion].question;
     var questionClass = $(document).find(".quizContainer > .question");
+    var answerClass = $(document).find(".quizContainer > .answer");
     var choiceList = $(document).find(".quizContainer > .choiceList");
     var numChoices = questions[currentQuestion].choices.length;
     
     $(questionClass).text(question);
+
+    $(answerClass).text("");
 
     $(choiceList).find("li").remove();
 
@@ -96,6 +104,7 @@ function resetQuiz() {
     currentQuestion = 0;
     correctAnswers = 0;
     hideScore();
+    $(document).find(".startButton").hide();
 }
 
 function displayScore() {
