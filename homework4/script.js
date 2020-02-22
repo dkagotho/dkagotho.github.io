@@ -60,7 +60,7 @@ $(document).ready(function () {
                 }
                 currentQuestion++; // Since we have already displayed the first question on DOM ready
                 if (currentQuestion < questions.length) {
-                    setTimeout(function(){ displayCurrentQuestion(); }, 3000);
+                    setTimeout(function(){ displayCurrentQuestion(); }, 4000);
                 } else {
                     displayScore();
                     $(document).find(".startButton").show();
