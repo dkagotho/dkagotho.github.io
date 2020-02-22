@@ -34,9 +34,7 @@ $(document).ready(function () {
 console.log(window.location.href)
     if (window.location.href.indexOf("start.html") >-1){
         startQuiz();
-    } else {
-        $(document).end(".quizMessage").restart();
-    }
+    } 
     // Display the first question
     displayCurrentQuestion();
     $(this).find(".quizMessage").hide();
