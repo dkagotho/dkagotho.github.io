@@ -79,3 +79,13 @@ p {
     font-weight: bold;
     font-size: 20px;
 }
+#time {
+    float: right;
+    display: block;
+    margin-right: 100px;
+    margin-top: 50px;
+    font-weight: bold; 
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: crimson;
+}

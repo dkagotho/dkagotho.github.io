@@ -31,7 +31,12 @@ var correctAnswers = 0;
 var quizOver = false;
 
 $(document).ready(function () {
-
+console.log(window.location.href)
+    if (window.location.href.indexOf("start.html") >-1){
+        startQuiz();
+    } else {
+        $(document).end(".quizMessage").restart();
+    }
     // Display the first question
     displayCurrentQuestion();
     $(this).find(".quizMessage").hide();
@@ -74,7 +79,7 @@ $(document).ready(function () {
             hideScore();
         }
     });
-
+    
 });
 
 function displayCurrentQuestion() {
@@ -114,4 +119,27 @@ function displayScore() {
 
 function hideScore() {
     $(document).find(".result").hide();
+}
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.text(minutes + ":" + seconds);
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+function startQuiz() {
+    console.log("startQuiz");
+    var duration = 60 * 3,
+        display = $("#time");
+    startTimer(duration, display);
 }
