@@ -50,7 +50,7 @@ console.log(window.location.href)
                 $(document).find(".quizMessage").text("Please select an answer");
                 $(document).find(".quizMessage").show();
             } else {
-                // TODO: Remove any message -> not sure if this is efficient to call this each time....
+                
                 $(document).find(".quizMessage").hide();
 
                 if (value == questions[currentQuestion].correctAnswer) {
@@ -61,7 +61,7 @@ console.log(window.location.href)
                     console.log("incorrect");
                     $(document).find(".answer").text("Incorrect");
                 }
-                currentQuestion++; // Since we have already displayed the first question on DOM ready
+                currentQuestion++; 
                 if (currentQuestion < questions.length) {
                     setTimeout(function(){ displayCurrentQuestion(); }, 4000);
                 } else {
