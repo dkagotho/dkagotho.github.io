@@ -42,9 +42,13 @@ console.log(futureHours);
 
 for (let index = 0; index < pastHours.length; index++) {
     var element = pastHours[index];
-    $(".container").append("<div class= 'row hour past'>"+element+"</div>");
+    $(".container").append("<div class = 'row past'><div class = 'hour'>" + element + "</div><textarea id = 'event_past_"+index+"'></textarea></div>");
 }
 for (let index = 0; index < futureHours.length; index++) {
     var element = futureHours[index];
-    $(".container").append("<div class= 'row hour future'>"+element+"</div>");
+    var currentHour = "future";
+    if (index == 0){
+        currentHour = "present";
+    }
+    $(".container").append("<div class = 'row "+currentHour+"'><div class = 'hour'>" + element + "</div><textarea id = 'event_future_"+index+"'></textarea></div>");
 }
