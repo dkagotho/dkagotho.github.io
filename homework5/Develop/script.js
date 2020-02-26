@@ -1,8 +1,10 @@
 
 $(document).ready(function () {
-console.log(moment());
 $("#currentDay").text(moment().format("dddd MMMM Do YYYY"));
-
+$("i").on("click",function(){
+    save();
+})
+load();
 });
 
 // var hours = [];
@@ -52,12 +54,13 @@ for(var i=hour; i<18; i++) {
     }
 }
 
-console.log(pastHours);
-console.log(futureHours);
+// console.log(pastHours);
+// console.log(futureHours);
 
 for (let index = 0; index < pastHours.length; index++) {
     var element = pastHours[index];
     $(".container").append("<div class = 'description text-block row past'><div class = 'hour'>" + element + "</div><textarea id = 'event_past_"+index+"'></textarea><button class='saveBtn'><i>save</i></button></div>");
+
 }
 for (let index = 0; index < futureHours.length; index++) {
     var element = futureHours[index];
@@ -66,4 +69,17 @@ for (let index = 0; index < futureHours.length; index++) {
         currentHour = "present";
     }
     $(".container").append("<div class = 'description text-block row "+currentHour+"'><div class = 'hour'>" + element + "</div><textarea id = 'event_future_"+index+"'></textarea><button class='saveBtn'><i>save</i></button></div>");
+}
+function save(){
+    $("textarea").each(function() {
+        var value = $(this).val(),
+            key = $(this).attr("id");
+        localStorage[key] = value;
+    });
+}
+function load(){
+    $("textarea").each(function() {
+        var key = $(this).attr("id");
+        $(this).val(localStorage[key]);
+    });
 }
