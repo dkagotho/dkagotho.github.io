@@ -22,18 +22,33 @@ var pastHours = [],
     futureHours = [];
 for( var i=9; i<hour; i++ ) {
     if (i>=13){
-        pastHours.push(i-12 + ":00");   
+        if (i-12>=10){
+            pastHours.push(i-12 + ":00");    
+        }
+        else{
+            pastHours.push(i-12 + ":00  ");
+        } 
     }
     else{
-        pastHours.push(i+":00");
+        if (i >=10){
+        pastHours.push(i+":00");   
+        }
+        else{
+            pastHours.push(i+":00  ");
+        }
     }
 }
 for(var i=hour; i<18; i++) {
   if (i>=13){
-    futureHours.push(i-12 + ":00");   
+    futureHours.push(i-12 + ":00  ");   
     }
     else{
-   futureHours.push(i+":00");
+        if (i >=10){
+            futureHours.push(i+":00");   
+        }
+        else{
+            futureHours.push(i+":00  ");
+        }
     }
 }
 
@@ -42,7 +57,7 @@ console.log(futureHours);
 
 for (let index = 0; index < pastHours.length; index++) {
     var element = pastHours[index];
-    $(".container").append("<div class = 'row past'><div class = 'hour'>" + element + "</div><textarea id = 'event_past_"+index+"'></textarea></div>");
+    $(".container").append("<div class = 'description text-block row past'><div class = 'hour'>" + element + "</div><textarea id = 'event_past_"+index+"'></textarea><button class='saveBtn'><i>save</i></button></div>");
 }
 for (let index = 0; index < futureHours.length; index++) {
     var element = futureHours[index];
@@ -50,5 +65,5 @@ for (let index = 0; index < futureHours.length; index++) {
     if (index == 0){
         currentHour = "present";
     }
-    $(".container").append("<div class = 'row "+currentHour+"'><div class = 'hour'>" + element + "</div><textarea id = 'event_future_"+index+"'></textarea></div>");
+    $(".container").append("<div class = 'description text-block row "+currentHour+"'><div class = 'hour'>" + element + "</div><textarea id = 'event_future_"+index+"'></textarea><button class='saveBtn'><i>save</i></button></div>");
 }
