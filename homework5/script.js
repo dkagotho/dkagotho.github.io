@@ -25,31 +25,37 @@ var pastHours = [],
 for( var i=9; i<hour; i++ ) {
     if (i>=13){
         if (i-12>=10){
-            pastHours.push(i-12 + ":00");    
+            pastHours.push(i-12 + "PM");    
         }
-        else{
-            pastHours.push(i-12 + ":00  ");
+        else if(i<18){
+            pastHours.push(i-12 + "PM  ");
         } 
     }
     else{
-        if (i >=10){
-        pastHours.push(i+":00");   
+        if (i==12){
+            pastHours.push(i+"PM");     
+        }
+        else if (i >=10){
+        pastHours.push(i+"AM");   
         }
         else{
-            pastHours.push(i+":00  ");
+            pastHours.push(i+"AM  ");
         }
     }
 }
 for(var i=hour; i<18; i++) {
   if (i>=13){
-    futureHours.push(i-12 + ":00  ");   
+    futureHours.push(i-12 + "PM  ");   
     }
     else{
-        if (i >=10){
-            futureHours.push(i+":00");   
+        if (i==12){
+            futureHours.push(i+"PM");     
+        }
+        else if (i >=10){
+            futureHours.push(i+"AM");   
         }
         else{
-            futureHours.push(i+":00  ");
+            futureHours.push(i+"AM  ");
         }
     }
 }
