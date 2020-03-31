@@ -5,7 +5,7 @@ h1 {
     height: 50px;
     color: white;
     text-align: center;
-    background-color: black;
+    background-color: #343a40;
     box-shadow: 5px 10px lightgray;
 }
 #left-box {
