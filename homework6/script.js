@@ -1,5 +1,5 @@
-let cities = ["Boston", "Philadelphia", "Detroit", "San Francisco"];
-let apiKey = "c94ac49bcd423ef700d020797840e0c4";
+let cities = [];
+let apiKey = "d91c1db30bc07aee2930de58403de117";
 let lat = "latitude";
 let lon = "longitude";
 let uvIndex = (lat + lon)
