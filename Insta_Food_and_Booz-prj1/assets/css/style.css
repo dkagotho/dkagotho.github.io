@@ -1,0 +1,492 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Lalezar', cursive;
+  /* color: rgb(240, 240, 240); */
+  text-decoration: none;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+  /* background-image: url("https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/690563/910/607/m1/fpnw/wm0/foodicon-.jpg?1443796564&s=7fb1d67877ef8ef132e218f9a13b0fa6"); */
+  background-image: url(https://cdn.hipwallpaper.com/i/48/23/czZwyp.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* color: rgb(240, 240, 240); */
+  background-color: black;
+
+  
+}
+
+.center {
+  margin-top: 1rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+p {
+  margin: 0px;
+}
+
+.brand-color {
+  background-color: rgba(190, 19, 42, 0.911);
+
+}
+
+/* ======== text font ================ */
+.logo {
+  padding: 10px 10px 10px 10px;
+  font-family: 'Pacifico', cursive;
+}
+
+.introduction {
+  font-size: 35px;
+  color: #fff;
+  text-shadow: 3px 3px rgba(190, 19, 42, 0.911);
+  margin-top: 1rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  text-align: center;
+  border-radius: 12px;
+}
+
+
+/* ======== if we want a video ================ */
+/* .video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+} */
+
+
+/* ======== global classes ================ */
+.selectors{
+  width: 150px;
+}
+
+
+.dropdown {
+  margin-bottom: 30px;
+}
+
+
+
+/* ======== navigation ================ */
+.nav {
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+  font-family: 'Pacifico', cursive;
+
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+.container {
+ margin: 0px;
+}
+
+.nav-title {
+  margin-left: 10px;
+}
+
+/* ============= selectors ================ */
+
+.select-style {
+  display: block;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color:  rgba(190, 19, 42, 0.911);
+  line-height: 1.3;
+  padding: .6em 1.4em .5em .8em;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  border-radius: .5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+}
+.select-css::-ms-expand {
+  display: none;
+}
+.select-css:hover {
+  border-color: #888;
+}
+.select-css:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
+}
+.select-css option {
+  font-weight:normal;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+div.container {
+  /* margin: 0px; */
+  /* display: block;
+  justify-content: center;
+  align-content: center; */
+}
+
+.container-wrap {
+
+  margin: 0px;
+  display: block;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+/* center this class */
+.option-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  width: 8em;
+}
+
+
+
+/* ======== button ================ */
+.search-button {
+  margin-top: 20px;
+}
+
+.button-large {
+  font-size: 110%;
+}
+
+
+
+/* ======== DOM elements ================ */
+
+/* h1#answer {
+  margin-left: 100px;    
+}
+*/
+
+/* ======== this wraps the hole menu result  ================ */
+
+.menu-choice {
+  width: 60%;
+  display: inline-block;
+    color: rgb(240, 240, 240);
+
+}
+
+.answer-class {
+  width: 100%;
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding-left: 27%;
+  background-image: url("https://i.pinimg.com/originals/f1/47/2f/f1472f334b2df7c0002176ddf26ca638.jpg");
+  background-size: contain;  
+}
+
+div.result {
+  margin-left: 0px;
+  /* background-color: hotpink; */
+}
+
+.row {
+  /* background-image: url(https://cdn.hipwallpaper.com/i/48/23/czZwyp.jpg); */
+  /* background-color: hotpink; */
+  width: 100%;
+}
+
+/* ======== timeselection page ======== */
+
+.container-timeselection {
+  width: 100%;
+  padding-left: 0px;
+  margin: 0px;
+}
+
+.introduction-timeselection {
+  font-size: 35px;
+  color: #fff;
+  text-shadow: 3px 3px rgba(190, 19, 42, 0.911);
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  /* margin-bottom: 5%; */
+  text-align: center;
+  border-radius: 12px;
+}
+
+.square {
+  border: 5px solid rgba(190, 19, 42, 0.911);
+  width: 290px;
+  height: 290px;
+  margin-left: 20%;
+  
+  /* background-image: url("https://theviewfromgreatisland.com/wp-content/uploads/2016/06/Vegan-breakfast-bowl-5230-June-08-2016.jpg"); */
+  /* background-size: contain; */
+  
+}
+
+.breakfast {
+  background-image: url("https://theviewfromgreatisland.com/wp-content/uploads/2016/06/Vegan-breakfast-bowl-5230-June-08-2016.jpg");
+  background-size: contain;
+  border-radius: 50px 0px 0px 0px;
+}
+
+.lunch {
+  background-image: url("https://sunkissedkitchen.com/wp-content/uploads/2018/04/Vegan-One-Pot-Pasta-with-Veggies-500x500.jpg");
+  background-size: contain;
+  border-radius: 0px 50px 0px 0px;
+}
+
+.snacks {
+  background-image: url("https://cdn-s-www.republicain-lorrain.fr/images/41DA5964-521E-4E03-9F43-E8A5E202AC19/NW_raw/cette-recette-permet-aussi-de-montrer-aux-gens-qu-ils-mangent-vegan-avec-plaisir-sans-le-savoir-sourit-la-cheffe-photo-rl-anne-sophie-guret-1565774101.jpg");
+  background-size: contain;
+  border-radius: 0px 0px 0px 50px;
+}
+
+.dinner {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/594ecccd2994caad23cad10a/1538257976978-OETFRQCTJ3TSJ5STJRRY/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0s0XaMNjCqAzRibjnE_wBlkZ2axuMlPfqFLWy-3Tjp4nKScCHg1XF4aLsQJlo6oYbA/Meet+In+Gastown+.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 0px 0px 50px 0px;
+}
+
+.meal-title {
+  font-size: 35px;
+  color: #fff;
+  text-shadow: 3px 3px rgba(190, 19, 42, 0.911);
+  text-align: center;
+}
+
+
+
+/* ======== Food Titel ======== */
+.foodLink {
+  background-color:rgba(190, 19, 42, 0.911);
+  text-shadow: 3px 3px rgba(190, 19, 42, 0.911);
+  padding: 0px 5px 7px 5px;
+  /* padding-left: 5px;
+  padding-bottom: 7px; */
+  font-size: 25px;
+  font-family: 'Pacifico', serif;
+  text-decoration: underline;
+  border-radius: 0px 50px 0px 0px;
+  
+}
+
+img {
+  margin-bottom: 30px;
+  border-radius: 0px 0px 50px 0px;
+}
+
+
+/* ======== page 4 ========== */
+
+li {
+  text-decoration: none;
+}
+
+#foodImage {
+  list-style-type: none;
+}
+
+.caralho {
+  background-color:  rgba(190, 19, 42, 0.911);
+  padding-right: 5px;
+}
+
+.tester {
+  margin-top: 50px;
+}
+/* .spaces {
+  margin-top: 100px;
+} */
+
+/* ÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷ index page ÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷
+
+.boozeWindow {
+  border: solid rgba(190, 19, 42, 0.911) 6px ;
+  background-color: hotpink;
+} */
+
+
+
+
+
+
+/* ======== @media ================ */
+@media (max-width:1153px) {
+  body {
+    background-size: auto;
+
+  }
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: #A05;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+  .introduction {
+    font-size: medium;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .container {
+    /* margin: -90px;
+     */
+  }
+  
+  .answer-class {
+    width: 100%;
+  }
+
+  .answer-display {
+    margin: 70px 0px;
+  }
+
+  .foodLink {
+    /* background-color: hotpink; */
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 20px;
+    
+  }
+  
+  .answer-class {
+    padding: 0px;
+  }
+
+  .menu-choice {
+    width: 100%;
+  }
+/* ==================timeselection page================ */
+
+  
+  .introduction-timeselection {
+  font-size: medium;
+  margin-left: 20px;
+  margin-right: 20px;
+  }
+  .square {
+    border: 5px solid rgba(190, 19, 42, 0.911);
+    width: 230px;
+    height: 230px;
+    margin: 0px;
+  }
+
+  
+}
+
+@media (max-width:426px) {
+  .square {
+    border: 5px solid rgba(190, 19, 42, 0.911);
+    width: 130px;
+    height: 130px;
+    margin: 0px;
+  }
+
+
+  p.letter-size {
+    font-size: 20px;
+  }
+
+  
+}

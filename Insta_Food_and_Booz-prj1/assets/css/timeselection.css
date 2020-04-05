@@ -1,0 +1,101 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* background-color: salmon; */
+    
+    
+}
+
+span {
+    font-size: 90px;  
+}
+
+header {
+    background-color: salmon;
+}
+body {
+    background: url(bg.png);
+    padding: 20px 20px 20px 20px;
+}
+/* section {
+    
+} */
+
+.block1 {
+    font-family: 'Pacifico', sans-serif, serif;
+    text-shadow: 2px 2px rgb(177, 91, 81);
+}
+
+.welcome {
+    /* font-family: 'Pacifico', sans-serif, serif; */
+    font-size: 40px;
+}
+
+.container {
+    text-align: center;
+    font-size: 25px;
+}
+/* .logo {
+    font-family: 'Pacifico', sans-serif, serif;
+    font-size: 70px;
+} */
+
+.introduction {
+    margin-top: 60px;
+
+}
+
+.block1 {
+    text-align: center;
+}
+
+.button {
+    text-shadow:2px 2px black;
+    color: seashell;
+    font-family: 'Anton', serif ;
+    font-size: 40px;
+    padding: 100px 50px 100px 50px;
+    text-align: center;
+    margin: 100px;
+    border: 10px solid salmon;
+    width: 200px;
+}
+
+
+
+.ageRequirement {
+    text-shadow:2px 2px black;
+    color: seashell;
+    font-family: 'Anton', serif ;
+    font-size: 60px;
+    padding: 100px 50px 100px 50px;
+    /* margin: 100px; */
+    border: 10px solid black;
+    width: 200px;
+    /* height: 200px; */
+}
+
+.breakfast {
+    float: left;
+    margin-left: 10%;
+    margin-bottom: 5px;
+}
+
+.lunch {
+   float: right;
+   margin-right: 10%;
+   margin-bottom: 5px;
+}
+
+.snacks {
+    float: left;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+.dinner {
+    float: right;
+    margin-right: 10%;
+    margin-top: 20px;
+}

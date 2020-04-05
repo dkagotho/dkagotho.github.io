@@ -1,0 +1,372 @@
+* {
+    box-sizing: border-box;
+    font-family: Pacifico, cursive;
+  }
+  .h1 {
+    text-align: left;
+  }
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+    background-image: url(https://previews.123rf.com/images/klenova/klenova1411/klenova141100167/34111566-food-background-with-wine-and-grape-lots-of-copy-space-.jpg);
+    background-size: cover;
+  }
+  h2 {
+      font-size: 50px;
+  }
+  /* .footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: #2F2F2F;
+    background-color: #fff;
+    border-top: 1px solid #E5E5E5;
+  }
+  .footer > * {
+    flex:  1 100%;
+  }
+  .footer__addr {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+  }
+  .footer__logo {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+  }
+  .footer__addr h2 {
+    margin-top: 1.3em;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .nav__title {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .footer address {
+    font-style: normal;
+    color: #999;
+  }
+  .footer__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    max-width: max-content;
+    background-color: rgb(33, 33, 33, 0.07);
+    border-radius: 100px;
+    color: #2F2F2F;
+    line-height: 0;
+    margin: 0.6em 0;
+    font-size: 1rem;
+    padding: 0 1.3em;
+  }
+  .footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .footer li {
+    line-height: 2em;
+  }
+  .footer a {
+    text-decoration: none;
+  }
+  .footer__nav {
+    display: flex;
+      flex-flow: row wrap;
+  }
+  .footer__nav > * {
+    flex: 1 50%;
+    margin-right: 1.25em; */
+  
+  .nav__ul a {
+    color: #999;
+  }
+  .nav__ul--extra {
+    column-count: 2;
+    column-gap: 1.25em;
+  }
+  .legal {
+    display: flex;
+    flex-wrap: wrap;
+    color: #999;
+  }
+  .legal__links {
+    display: flex;
+    align-items: center;
+  }
+  .heart {
+    color: #2F2F2F;
+  }
+  @media screen and (min-width: 24.375em) {
+    .legal .legal__links {
+      margin-left: auto;
+    }
+  }
+  @media screen and (min-width: 40.375em) {
+    .footer__nav > * {
+      flex: 1 ;
+    }
+    .nav__item--extra {
+      flex-grow: 2;
+    }
+    .footer__addr {
+      flex: 1 0px;
+    }
+    .footer__nav {
+      flex: 2 0px;
+    }
+  }
+  .introduction {
+    font-size: 35px;
+    color: #fff;
+    text-shadow: 3px 3px rgba(190, 19, 42, 0.911);
+    margin-top: 1rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+    border-radius: 12px;
+  }
+  #over19yes {
+    color: #eeef;
+  }
+  /* ======== if we want a video ================ */
+  /* .video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  .block1 {
+    font-size: 35px;
+    color: #fff;
+    text-shadow: 3px 3px rgba(190, 19, 42, 0.911);
+    margin-top: 1rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+    border-radius: 12px;
+}
+  .selectors{
+    width: 150px;
+  }
+  .dropdown {
+    margin-bottom: 30px;
+  }
+  .nav {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(190, 19, 42, 0.911);
+    position: relative;
+  }
+  .nav > .nav-header {
+    display: inline;
+  }
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+    font-family: 'Pacifico', cursive;
+  }
+  #answer {
+    text-align: center;
+    color: blue;
+    font-style: italic;
+    font-size: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .nav > .nav-btn {
+    display: none;
+  }
+  .nav > .nav-links {
+    float: right;
+    font-size: 18px;
+  }
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #EFEFEF;
+  }
+  .nav > .nav-links > a:hover {
+    background-color: rgba(190, 19, 42, 0.911);
+  }
+  .nav > #nav-check {
+    display: none;
+  }
+  .container {
+    margin: 0px;
+  }
+  .nav-title {
+    margin-left: 10px;
+  }
+  .select-style {
+    display: block;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+      linear-gradient(to bottom, #FFFFFF 0%,#E5E5E5 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+  }
+  .select-css::-ms-expand {
+    display: none;
+  }
+  .select-css:hover {
+    border-color: #888;
+  }
+  .select-css:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222;
+    outline: none;
+  }
+  .select-css option {
+    font-weight:normal;
+  }
+  div.container {
+    /* margin: 0px; */
+    margin-left: 30px;
+    display: block;
+    justify-content: center;
+    align-content: center;
+  }
+  .option-container {
+    margin-left: 0px;
+    /* background-color: thistle; */
+  }
+  button {
+    margin-top: 20px;
+    cursor: pointer;
+    border: blue;
+    background-color: black;
+  }
+  .button-large {
+    font-size: 110%;
+  }
+  .text {
+    text-shadow:2px 2px black;
+    color: seashell;
+    background-color: transparent;
+    font-family: 'Anton', serif ;
+    font-size: 40px;
+    padding: 75px 50px 75px 50px;
+    text-align: center;
+    margin-left: 35%;
+    margin-bottom: 20px;
+    border: 10px solid rgba(190, 19, 42, 0.911);
+    width: 400px;
+    background-image: url(../../images/gm-diet-alcohol.jpg);
+    cursor: default;
+}
+.foodtypes {
+  cursor: pointer;
+  text-shadow:2px 2px black;
+  color: seashell;
+  font-family: 'Anton', serif ;
+  font-size: 40px;
+  padding: 100px 50px 100px 50px;
+  text-align: center;
+  margin: 100px;
+  border: 10px solid salmon;
+  width: 300px;
+}
+#mealTypeSelection {
+  display: inline-block;
+}
+.breakfast {
+  float: left;
+  margin-left: 10%;
+  margin-bottom: 5px;
+  background-image: url(../../images/breakfast.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.lunch {
+ float: right;
+ margin-right: 10%;
+ margin-bottom: 5px;
+ background-image: url(../../images/lunch.jpg);
+ background-repeat: no-repeat;
+}
+.snacks {
+  float: left;
+  margin-left: 10%;
+  margin-top: 20px;
+  background-image: url(../../images/snacks.png);
+}
+.dinner {
+  float: right;
+  margin-right: 10%;
+  margin-top: 20px;
+  background-image: url(../../images/dinner.jpg);
+}
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: #A05;
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+      font-family: 'Pacifico', cursive;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
