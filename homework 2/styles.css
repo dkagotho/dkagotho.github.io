@@ -37,6 +37,20 @@ p {
 }
 }
 
+.zoom:hover {
+    transform: scale(1.2); 
+  }
+
+.portfolio-link{
+    border-radius: 10%;
+}
+
+.portfolio-tilte{
+    padding: 20px 55px;
+   
+    text-align: left;
+}
+
 .btn {
     margin-bottom: 70px;
     margin-left: 210px;
