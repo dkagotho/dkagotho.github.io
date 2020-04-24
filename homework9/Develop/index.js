@@ -56,7 +56,7 @@ let sections = [
   },
 ];
 
-function writeToFile(fileName, data) {
+function writeToFile(data, fileName) {
   for (let i = 0; i < fileName.length; i++) {
     console.log(`Creating "${fileName[i]}" file`);
 
@@ -77,7 +77,7 @@ function init() {
       api.getRepository(responseQuestion.username).then((resRepo) => {
         const repoNames = resRepo.data.map((repository) => repository.name);
         inquirer.prompt(sections).then( (responseSections) => {
-            writeToFile(
+            writeToFile(generateMarkdown(resUser.data, resRepo.data[question[question.length - 1].choices.indexOf(responseQuestion.repolist)], responseSections, repoNames), "README.md", `${resUser.data.login}.pdf`);
               generateMarkdown(
                 resUser.data,
                 resRepo.data,
@@ -86,9 +86,10 @@ function init() {
               ),
               "README.md",
               `${resUser.data.login}.pdf`
-            );
+            
           
         });
+        
       });
     });
   });
