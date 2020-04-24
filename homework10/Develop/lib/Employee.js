@@ -3,7 +3,7 @@ class Employee {
     constructor(name, id, email) {
         this.id = id;
         this.name = name;
-        this.title = 'Employee';
+        this.title = "Employee";
         this.email = email;
     }
 

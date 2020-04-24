@@ -4,7 +4,12 @@ const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
-​
+const http = require("http");​
+const ManagerProfile = require("./templates/ManagerProfile");
+const EngineerProfile = require("./templates/EngineerProfile");
+const InternProfile = require("./templates/InternProfile");
+const TeamRoster = require("./templates/TeamRoster");
+
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 ​
