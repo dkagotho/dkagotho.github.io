@@ -7,7 +7,6 @@ class Employee {
         this.email = email;
     }
 
-    // Get instructions
     getId() {
         return this.id;
     }
