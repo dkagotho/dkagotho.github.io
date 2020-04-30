@@ -4,27 +4,25 @@ const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
-const ManagerProfile = require("./templates/ManagerProfile");
-const EngineerProfile = require("./templates/EngineerProfile");
-const InternProfile = require("./templates/InternProfile");
-const TeamRoster = require("./templates/TeamRoster");
 
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "team.html");
+
+const render = require("./lib/htmlRenderer");
 
 class App {
     constructor() {
         this.db = {
             manager: null,
             engineers: [], 
-            interns: []
+            interns: [], 
         }
     }
 
     async getEmployeeInfo() {
 
         console.log(`\nEnter employee information:\n`);
-        // canthis objects be put in a string????vvv
+
         let employeeInfo =
             await inquirer
                 .prompt([
@@ -162,13 +160,13 @@ class App {
         let interns = '';
 
         if (this.db.manager) {
-            managerProfile = new ManagerProfile(this.db.manager);
-            managerProfile = managerProfile.createProfile();
+            managerProfile = new Manager(this.db.manager);
+            managerProfile = manager.createProfile();
         }
 
         if (this.db.engineers) {
             for (const engineer of this.db.engineers) {
-                let engineerProfile = new EngineerProfile(engineer);
+                let engineerProfile = new Engineer(engineer);
                 engineerProfile = engineerProfile.createProfile();
                 engineers += engineerProfile;
             }
@@ -176,7 +174,7 @@ class App {
 
         if (this.db.interns) {
             for (const intern of this.db.interns) {
-                let internProfile = new InternProfile(intern);
+                let internProfile = new Intern(intern);
                 internProfile = internProfile.createProfile();
                 engineers += internProfile;
             }
@@ -191,13 +189,10 @@ class App {
     }
 
     createServer(teamRoster) {
-
         fs.writeFile("./public/team.html", teamRoster, function (err) {
             if (err) throw err;
-            console.log("Store!");
+            console.log("Done");
         });
-
-
         http.createServer(function (req, res) {
             fs.readFile("./public/team.html", function (err, data) {
                 res.writeHead(200, { "Content-Type": "text/html" });
@@ -223,7 +218,7 @@ class App {
                     .prompt([
                         {
                             type: "input",
-                            message: "If you wish to exit type 'yes'",
+                            message: "Type 'yes' if you wish to exit",
                             name: "exit"
                         }
                     ]);
