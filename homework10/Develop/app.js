@@ -1,3 +1,4 @@
+const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -21,7 +22,7 @@ class App {
 
     async getEmployeeInfo() {
 
-        console.log(`\nEnter employee information:\n`);
+        // console.log(`\nEnter employee information:\n`);
 
         let employeeInfo =
             await inquirer
@@ -191,7 +192,7 @@ class App {
     createServer(teamRoster) {
         fs.writeFile("./public/team.html", teamRoster, function (err) {
             if (err) throw err;
-            console.log("Done");
+            // console.log("Done");
         });
         http.createServer(function (req, res) {
             fs.readFile("./public/team.html", function (err, data) {
