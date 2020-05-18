@@ -5,6 +5,8 @@ const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
+const http = require("http");
+const util = require('util');
 
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "team.html");
@@ -14,7 +16,7 @@ const render = require("./lib/htmlRenderer");
 class App {
     constructor() {
         this.db = {
-            manager: null,
+            manager: [],
             engineers: [], 
             interns: [], 
         }
@@ -162,13 +164,15 @@ class App {
 
         if (this.db.manager) {
             managerProfile = new Manager(this.db.manager);
-            managerProfile = manager.createProfile();
+            // console.log(this.db.manager);
+            // console.log(managerProfile);
+            // managerProfile = managerProfile.createProfile();
         }
 
         if (this.db.engineers) {
             for (const engineer of this.db.engineers) {
                 let engineerProfile = new Engineer(engineer);
-                engineerProfile = engineerProfile.createProfile();
+                // engineerProfile = engineerProfile.createProfile();
                 engineers += engineerProfile;
             }
         }
@@ -176,22 +180,31 @@ class App {
         if (this.db.interns) {
             for (const intern of this.db.interns) {
                 let internProfile = new Intern(intern);
-                internProfile = internProfile.createProfile();
-                engineers += internProfile;
+                // internProfile = internProfile.createProfile();
+                interns += internProfile;
             }
         }
 
-        const team = managerProfile + engineers + interns;
+        let team = [];
 
-        let teamRoster = new TeamRoster(team);
-        teamRoster = teamRoster.createTeamRoster();
+        team.push(managerProfile);
+        team.push(engineers);
+        team.push(interns);
 
-        return teamRoster;
+        // let teamRoster = new TeamRoster(team);
+        // teamRoster = teamRoster.createTeamRoster();
+        // console.log("team", Object.values(team).filter(employee => employee.getRole() === "Manager"));
+        // console.log(util.inspect(team, true, 10));
+        // console.log(Object.values(team));
+        return render(team);
     }
 
     createServer(teamRoster) {
         fs.writeFile("./public/team.html", teamRoster, function (err) {
-            if (err) throw err;
+            if (err) {
+                console.log(err);
+                throw err;
+            } 
             // console.log("Done");
         });
         http.createServer(function (req, res) {
@@ -202,6 +215,7 @@ class App {
             });
 
         }).listen(8080);
+        console.log('listening on 8080') 
     }
 
     async init() {
