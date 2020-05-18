@@ -5,7 +5,7 @@ const templatesDir = path.resolve(__dirname, "../templates");
 
 const render = employees => {
   const html = [];
-  console.log(Object.values(employees));
+  // console.log(Object.values(employees[2]));
   html.push(employees
     .filter(employee => employee.title === "Manager")
     .map(manager => renderManager(manager.name))
@@ -36,7 +36,7 @@ const renderManager = manager => {
 const renderEngineer = engineer => {
   let template = fs.readFileSync(path.resolve(templatesDir, "engineer.html"), "utf8");
   template = replacePlaceholders(template, "name", engineer.name);
-  template = replacePlaceholders(template, "role", engineer.role);
+  template = replacePlaceholders(template, "role", engineer.title);
   template = replacePlaceholders(template, "email", engineer.email);
   template = replacePlaceholders(template, "id", engineer.id);
   template = replacePlaceholders(template, "github", engineer.github);
@@ -46,7 +46,7 @@ const renderEngineer = engineer => {
 const renderIntern = intern => {
   let template = fs.readFileSync(path.resolve(templatesDir, "intern.html"), "utf8");
   template = replacePlaceholders(template, "name", intern.name);
-  template = replacePlaceholders(template, "role", intern.role);
+  template = replacePlaceholders(template, "role", intern.title);
   template = replacePlaceholders(template, "email", intern.email);
   template = replacePlaceholders(template, "id", intern.id);
   template = replacePlaceholders(template, "school", intern.school);
