@@ -6,6 +6,9 @@ let app = express();
 let db = require("./db/db.json");
 app.use(express.json());
 
+// require("./routes/api-routes")(app);
+// require("./routes/html-routes")(app);
+
 app.use(express.urlencoded({ extended: true }));
 
 const dbNotes = JSON.parse(
